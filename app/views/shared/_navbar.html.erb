@@ -6,17 +6,23 @@
   <div class="d-flex flex-row">
     <% if user_signed_in? %>
       <div class="px-3">
-        <%= link_to "Home", "#", class: "nav-link" %>
+        <%= link_to "INICIO", "#", class: "nav-link" %>
       </div>
       <div class="px-3">
-        <%= link_to "Messages", "#", class: "nav-link" %>
+        <%= link_to "ORDENES", "#", class: "nav-link" %>
       </div>
       <div class="px-3">
-        <%= button_to 'Logout', destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "log-out-button" %>
+        <%= link_to "ESTADISTICA", "#", class: "nav-link" %>
+      </div>
+      <div class="px-3">
+        <%= link_to "PRODUCTOS", "#", class: "nav-link" %>
+      </div>
+      <div class="px-3">
+        <%= button_to 'SALIR', destroy_user_session_path, method: :delete, form: {turbolink: false}, class: "log-out-button" %>
       </div>
     <% else %>
       <div class="px-3">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%= link_to "ENTRAR", new_user_session_path, class: "nav-link" %>
       </div>
     <% end %>
   </div>
